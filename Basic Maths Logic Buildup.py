@@ -32,3 +32,4 @@ if rev == n:
     print("Palindrome")
 else:
     print("Not a Palindrome")
+    #output= not a palindrome 
