@@ -41,3 +41,10 @@ while n>0:
       count+=1
 print(count)
 #output=6
+
+n=57854
+num=n
+while(n>0):
+    last_digit=n%10
+    print(last_digit)
+    n=n//10
