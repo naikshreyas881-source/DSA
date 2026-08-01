@@ -46,3 +46,13 @@ def func(count):
     func(count + 1)
 
 func(0)
+
+# Print monstor 4 times(backtraking)
+def func(count):
+    if count == 4:
+        return
+
+    func(count + 1)
+    print("monstor")
+
+func(0)
