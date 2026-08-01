@@ -36,3 +36,13 @@ for num in m:
        print(0)
     else:
        print(hash_list[num])
+
+# Print monstor 4 times
+def func(count):
+    if count == 4:
+        return
+
+    print("monster")
+    func(count + 1)
+
+func(0)
