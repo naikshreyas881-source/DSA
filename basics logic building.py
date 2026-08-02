@@ -73,3 +73,11 @@ def func (i,n):
     print(i)
     func(i+1,n)
 func(1,6)
+
+# print n to 1 (backtraking)
+def func (i,n):
+    if i>n:
+        return
+    func(i + 1, n)
+    print(i)
+func(1,6)
