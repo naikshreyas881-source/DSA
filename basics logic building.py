@@ -81,3 +81,11 @@ def func (i,n):
     func(i + 1, n)
     print(i)
 func(1,6)
+
+# print 1toN
+def func(n):
+    if n == 0:
+        return
+    func(n-1)
+    print(n)
+func(6)
