@@ -89,3 +89,12 @@ def func(n):
     func(n-1)
     print(n)
 func(6)
+
+# factorial of the number
+def factorial(num):
+    if num == 0 or num == 1:
+        return 1
+    else:
+        return num * factorial(num - 1)
+factorial(5)
+print(factorial(5))
