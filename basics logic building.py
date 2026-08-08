@@ -98,3 +98,17 @@ def factorial(num):
         return num * factorial(num - 1)
 factorial(5)
 print(factorial(5))
+
+#Given a string s, check if it is a palindrome or not. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        def func(left, right):
+            if left >= right:
+                return True
+
+            if s[left] != s[right]:
+                return False
+
+            return func(left + 1, right - 1)
+
+        return func(0, len(s) - 1)
