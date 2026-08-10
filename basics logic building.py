@@ -112,3 +112,12 @@ class Solution:
             return func(left + 1, right - 1)
 
         return func(0, len(s) - 1)
+#The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
+class Solution:
+    def fib(self, n: int) -> int:
+        def func(n):
+            if n ==0 or n==1:
+                return n
+            return func(n-1)+func(n-2)
+        answer=func(n)
+        return answer    
