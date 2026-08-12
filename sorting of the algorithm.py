@@ -35,3 +35,19 @@ def selection_sort(arr):
         arr[i],arr[min_idx] = arr[min_idx],arr[i]
     return arr
 print(selection_sort(arr))
+
+# Find the Minimum
+# input=arr=[12, 5, 8, 3, 10]
+# expectedoutput=[3, 5, 8, 12, 10]
+arr=[12, 5, 8, 3, 10]
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(0, n-1):
+        min_idx = i;
+        for j in range(i + 1, n-1):
+            if arr[j] < arr[min_idx]:
+                min_idx = j;
+        arr[i],arr[min_idx] = arr[min_idx],arr[i]
+    return arr
+print(selection_sort(arr))
+
