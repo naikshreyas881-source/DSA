@@ -120,3 +120,19 @@ def bubblesort(arr):
                 count+=1
     return arr,count
 print(bubblesort(arr))
+
+
+# slove by bubble sort and write Comparison Counting Question
+#input arr=[5, 2, 8, 1, 3]
+arr=[5, 2, 8, 1, 3]
+def bubblesort(arr):
+    n=len(arr)
+    count=0
+    for i in range(n-2,-1,-1):
+        for j in range(0,i+1):
+            count += 1
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+
+    return arr,count
+print(bubblesort(arr))
