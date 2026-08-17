@@ -181,4 +181,22 @@ class Solution:
 solution = Solution()
 print(solution.insertionSort(arr))
 
+# sort the array in desending order using insertion sort and count the shifts
+arr=[5, 2, 8, 1, 3]
+class Solution:
+    def insertionSort(self, arr):
+        n = len(arr)
+        count=0
+        for i in range(1, n):
+            key = arr[i]
+            j = i - 1
+            while j >= 0 and arr[j] > key:
+                arr[j + 1] = arr[j]
+                j -= 1
+            arr[j + 1] = key
+            count+=1
+        return arr,count
+solution = Solution()
+print(solution.insertionSort(arr))
+
         
