@@ -236,5 +236,25 @@ print(solution.insertionSort(arr))
             arr[k] = right[j]
             j += 1
             k += 1
+#Given an array of integers arr, sort the array in ascending order using the Quick Sort algorithm
+class Solution:
+    def quickSort(self, arr, low, high):
+        if low<high:
+            povit_id=self.partition(arr,low,high)
+            self.quickSort(arr,low,povit_id-1)
+            self.quickSort(arr,povit_id+1,high)
 
+    def partition(self, arr, low, high):
+        pivot=arr[low]
+        i,j=low,high
+        while i<j:
+            while i<=high-1 and arr[i]<=pivot  :
+                i+=1
+            while j>=low+1 and arr[j]>pivot  :
+                j-=1
+            if i<j:
+                arr[i],arr[j]=arr[j],arr[i]
+                
+        arr[low],arr[j]=arr[j],arr[low]
+        return j
         
